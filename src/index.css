@@ -1,3 +1,17 @@
+:root {
+  --primary: rgb(125, 0, 35);
+  --white: rgb(255, 255, 255);
+  --darkWhite: rgb(135, 135, 135);
+  --black: rgb(40, 40, 45);
+  --lightDark: rgb(50, 50, 60);
+  --green: rgb(100, 210, 90);
+  --red: rgb(255, 70, 70);
+  --transition: .3s;
+  --transitionLinear: all .3s linear;
+  --spacing: 2px;
+  --border: 4px;
+}
+
 .app {
   display: flex;
   flex-direction: column;

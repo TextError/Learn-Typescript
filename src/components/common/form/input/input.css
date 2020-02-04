@@ -1,0 +1,71 @@
+.input-wrapper {
+  position: relative;
+  margin: 25px 0;
+  width: 100%;
+}
+.input {
+  width: 100%;
+  padding: 7px 5px 0 5px;
+  color: var(--darkWhite);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid;
+  border-color: var(--darkWhite);
+}
+input:focus {
+  border-color: var(--primary);
+  color: var(--primary);
+  outline: none;
+}
+input:focus ~ .input-label {
+  top: -10px;
+  left: 5px;
+  font-size: .6em;
+  font-weight: 600;
+  transition: var(--transition);
+  color: var(--primary);
+}
+input:focus ~ .bar::before {
+  width: 100%;
+}
+.input-border-error {
+  border-color: var(--red);
+}
+.input-label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  font-size: .8em;
+  color: var(--darkWhite);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  pointer-events: none;
+}
+.input-shrink {
+  top: -10px;
+  left: 5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: .6em;
+  transition: var(--transition);
+  color: var(--primary);
+}
+.error {
+  color: var(--red);
+}
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.bar::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: var(--transition);
+  left: 0%;
+}
