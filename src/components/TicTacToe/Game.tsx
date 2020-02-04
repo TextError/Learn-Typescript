@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { squareValue } from './utils/interface';
 import Board from './Board';
 
@@ -72,10 +71,6 @@ const Game: React.FC = () => {
       </div>
     </div>
   )
-}
-
-Game.propTypes = {
-
-}
+};
 
 export default Game;

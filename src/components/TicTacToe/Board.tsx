@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import PropTypes from 'prop-types';
 import { IBoardProps } from './utils/interface';
 import Square from './Square';
 
@@ -25,10 +24,6 @@ const Board: React.FC<IBoardProps> = ({ squares, onClick }) => {
       </div>
     </div>
   )
-}
-
-Board.propTypes = {
-
-}
+};
 
 export default Board;

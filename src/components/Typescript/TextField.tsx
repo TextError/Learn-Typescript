@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
 
 interface Person {
   fName: string
@@ -13,6 +12,7 @@ interface ITextField {
   i?: number
   fn?: (bob: string) => string // ? means optional
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  children?: () => JSX.Element
 }
 
 const TextField: React.FC<ITextField> = ({ text, person: { fName, lName }, onChange }) => {
@@ -24,10 +24,6 @@ const TextField: React.FC<ITextField> = ({ text, person: { fName, lName }, onCha
       <input ref={inputRef} onChange={onChange} />
     </div>
   )
-}
-
-TextField.propTypes = {
-
 }
 
 export default TextField;
