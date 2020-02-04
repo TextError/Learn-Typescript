@@ -2,6 +2,7 @@ import React from 'react';
 import Form from './components/ToDo/Form';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import Typescript from './components/Typescript/Typescript';
+import Crud from './components/Redux_Crud/Crud';
 
 const App = (): JSX.Element => {
   return (
@@ -9,7 +10,8 @@ const App = (): JSX.Element => {
       <TicTacToe />
       <Typescript />
       <Form />
-    </ div>
+      <Crud />
+    </div>
   )
 };
 
