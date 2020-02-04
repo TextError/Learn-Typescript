@@ -6,7 +6,10 @@ const Form = (): JSX.Element => {
   const [value, setValue] = useState<string>('');
   const [todos, setTodos] = useState<ITodo[]>([]);
 
-  const onChange = (e: InputEvt):void => setValue(e.target.value);
+  const onChange = (e: InputEvt):void => {
+    // const {name, value}: {name: string; value: string;} = e.target;
+    setValue(e.target.value);
+  };
 
   const onSubmit = (e: FormElem):void => {
     e.preventDefault();

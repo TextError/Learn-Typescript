@@ -3,7 +3,7 @@ import Form from './components/ToDo/Form';
 import TicTacToe from './components/TicTacToe/TicTacToe';
 import Typescript from './components/Typescript/Typescript';
 
-export const App = (): JSX.Element => {
+const App = (): JSX.Element => {
   return (
     <div className='app'>
       <TicTacToe />
@@ -12,3 +12,5 @@ export const App = (): JSX.Element => {
     </ div>
   )
 };
+
+export default App;
