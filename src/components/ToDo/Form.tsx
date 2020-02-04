@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InputEvt, FormElem } from '../types';
+import { InputEvt, FormElem } from './types';
 
 export const Form = (): JSX.Element => {
   const [value, setValue] = useState<string>('');
