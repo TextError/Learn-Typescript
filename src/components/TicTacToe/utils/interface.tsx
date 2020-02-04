@@ -1,4 +1,4 @@
-type squareValue = 'X' | 'O' | null
+export type squareValue = 'X' | 'O' | null
 
 export interface ISquareProps {
   value: squareValue;
@@ -8,4 +8,4 @@ export interface ISquareProps {
 export interface IBoardProps {
   onClick(i: number): void;
   squares: squareValue[];
-}
+};

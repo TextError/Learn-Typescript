@@ -1,11 +1,6 @@
 import React from 'react';
+import Game from './Game';
 
-const TicTacToe = () => {
-  return (
-    <div>
-      lorem
-    </div>
-  )
-}
+const TicTacToe: React.FC = () => <Game />
 
 export default TicTacToe;
