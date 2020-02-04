@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { InputEvt, FormElem } from './types';
+import { InputEvt, FormElem } from './utils/types';
+import { ITodo } from './utils/interface';
 
-export const Form = (): JSX.Element => {
+const Form = (): JSX.Element => {
   const [value, setValue] = useState<string>('');
   const [todos, setTodos] = useState<ITodo[]>([]);
 
@@ -33,10 +34,11 @@ export const Form = (): JSX.Element => {
   };
   
   return (
-    <>
+    <div className='todo'>
       <h1>ToDo List</h1>
       <form noValidate onSubmit={onSubmit}>
         <input type="text" value={value} onChange={onChange} required />
+        {' '}
         <button type='submit'>Add ToDo</button>
       </form>
       <section>
@@ -52,11 +54,8 @@ export const Form = (): JSX.Element => {
           </div>
         )}
       </section>
-    </>
+    </div>
   )
 };
 
-interface ITodo {
-  text: string,
-  complete: boolean
-}
+export default Form;
