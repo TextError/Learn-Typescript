@@ -8,6 +8,7 @@ const Form: React.FC = () => {
   const {input, error} = state;
 
   const onChange = (e: inputEvt) => setState({ ...state, input: e.target.value });
+  const onFocus = () => !isEmpty(error) && setState({ ...state, error: '' });
 
   const onSubmit = (e: formSubmit) => {
     e.preventDefault();
@@ -21,9 +22,11 @@ const Form: React.FC = () => {
         label='Enter text here!'
         value={input}
         onChange={onChange}
+        onFocus={onFocus}
         type='text'
         error={error}
       />
+      <button type='submit'>Submit</button>
     </form>
   )
 };

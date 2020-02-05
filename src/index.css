@@ -96,3 +96,15 @@ ol, ul {
   justify-content: center;
   margin: 20px 0;
 }
+
+/* -------- Typescript -------- */
+
+.crud form {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+.crud form button {
+  margin-left: 5px;
+  padding: 5px;
+}

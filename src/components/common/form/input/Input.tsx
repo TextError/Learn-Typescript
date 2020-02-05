@@ -5,7 +5,7 @@ import isEmpty from '../../utils/isEmpty';
 import './input.css';
 import { IInput } from '../../../Redux_Crud/ts/interface';
 
-const Input: React.FC<IInput> = ({ name, label, value, onChange, type, error }) => {  
+const Input: React.FC<IInput> = ({ name, label, value, onChange, onFocus, type, error }) => {  
   const err = !isEmpty(error);
   const val = !isEmpty(value);
   return (
@@ -15,6 +15,7 @@ const Input: React.FC<IInput> = ({ name, label, value, onChange, type, error }) 
         name={name}
         value={value}
         onChange={onChange}
+        onFocus={onFocus}
         type={type}
         autoComplete='off'
         required

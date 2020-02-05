@@ -6,6 +6,7 @@ export interface IInput {
   label: string;
   value: string | number; 
   onChange: (e: inputEvt) => void;
+  onFocus(): void;
   type: string;
   error: string;
 }
