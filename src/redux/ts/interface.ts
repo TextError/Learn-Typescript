@@ -8,3 +8,8 @@ export interface IState {
 export interface IListTile {
   title: string;
 };
+
+export interface IPost {
+  id: number;
+  post: string;
+};

@@ -108,3 +108,10 @@ ol, ul {
   margin-left: 5px;
   padding: 5px;
 }
+
+.crud .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

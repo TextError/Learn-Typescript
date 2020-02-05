@@ -14,4 +14,5 @@ export interface IInput {
 export interface IInputState {
   input: string; 
   error: string;
+  id: number;
 }

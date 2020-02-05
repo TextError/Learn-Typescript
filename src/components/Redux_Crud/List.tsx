@@ -6,8 +6,8 @@ import { IState, IListTile } from '../../redux/ts/interface';
 
 const List: React.FC<any> = ({ title }) => {
   return (
-    <div>
-      {title}
+    <div className='list'>
+      <header>{title}</header>
     </div>
   )
 };
