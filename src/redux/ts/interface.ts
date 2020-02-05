@@ -1,15 +1,23 @@
 export interface IState {
   crud: {
     title: string;
-    posts: [];
+    posts: IPost[];
   }
 }
 
-export interface IListTile {
-  title: string;
-};
+// Crud //
 
 export interface IPost {
   id: number;
   post: string;
 };
+
+export interface IListProps {
+  title: string,
+  posts: IPost[]
+}
+
+export interface IListSelector {
+  title: string,
+  posts: IPost[]
+}

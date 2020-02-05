@@ -8,7 +8,7 @@ import Form from './Form';
 const Crud: React.FC<any> = ({ setItem }) => {
   
   useEffect(() => {
-    setItem('This is a Title post!');
+    setItem({ post: 'This is a Title post!' });
     // eslint-disable-next-line
   },[])
 
