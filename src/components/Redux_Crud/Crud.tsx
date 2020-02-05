@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { setItem } from '../../redux/actions/post';
+import { setItem } from '../../redux/actions/crud';
 
 import List from './List';
 import Form from './Form';
@@ -8,7 +8,7 @@ import Form from './Form';
 const Crud: React.FC<any> = ({ setItem }) => {
   
   useEffect(() => {
-    setItem({ id: 1, post: 'This is a post!' });
+    setItem('This is a Title post!');
     // eslint-disable-next-line
   },[])
 
