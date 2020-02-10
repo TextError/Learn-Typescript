@@ -1,8 +1,12 @@
-import { POST } from './types';
-import { IPost } from '../ts/interface';
-import { ICrudActionTypes } from '../ts/actions/crud';
+import { POST } from "./types";
+import { createAction, IActionUnion } from "./utils";
+
+export const setPost = createAction<POST.SET, string>(POST.SET);
 
 
-export const setItem = (title: string): ICrudActionTypes => ({ type: POST.SET, payload: title });
 
-export const addItem = (post: IPost): ICrudActionTypes => ({ type: POST.ADD, payload: post });
+const actions = {
+  setPost
+};
+
+export type IAction = IActionUnion<typeof actions>;

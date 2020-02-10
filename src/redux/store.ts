@@ -5,7 +5,7 @@ import rootReducer from './reducers';
 
 const middlewares = [thunk];
 
-export const store = createStore(rootReducer, compose(
+export const store: any = createStore(rootReducer, compose(
   applyMiddleware(...middlewares),
   (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 ));

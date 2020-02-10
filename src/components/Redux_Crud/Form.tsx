@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { addItem } from '../../redux/actions/crud';
+// import { addItem } from '../../redux/actions/crud';
 import { inputEvt, formSubmit, IofInputState } from './ts/interface';
 
 import Input from '../common/form/input/Input';
@@ -36,4 +36,4 @@ const Form: React.FC<any> = ({ addItem }) => {
   )
 };
 
-export default connect(null, { addItem })(Form);
+export default connect(null, { })(Form);

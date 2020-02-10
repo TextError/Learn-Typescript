@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { state_title, state_posts } from '../../redux/selectors/crud';
-import { IState, IListSelector, IListProps,  } from '../../redux/ts/interface';
+import { IAppState, IListSelector } from '../../redux/ts/interface';
+import { IListProps } from './ts/interface';
 
 const List: React.FC<IListProps> = ({ title, posts }) => {
   return (
@@ -12,7 +13,7 @@ const List: React.FC<IListProps> = ({ title, posts }) => {
   )
 };
 
-const mapStateToProps = createStructuredSelector<IState, IListSelector>({
+const mapStateToProps = createStructuredSelector<IAppState, IListSelector>({
   title: state_title,
   posts: state_posts
 });

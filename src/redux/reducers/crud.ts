@@ -1,20 +1,18 @@
 import { POST } from '../actions/types';
-import { ICrudActionTypes } from '../ts/actions/crud';
-import { IState } from '../ts/interface';
+import { IAppState } from '../ts/interface';
+import { IAction } from '../actions/crud';
 
-const INITIAL_STATE = {
+const INITIAL_STATE: IAppState = {
   title: '',
   posts: []
 };
 
 
-const post = (state: IState = INITIAL_STATE, action: ICrudActionTypes) => {
+const post = (state: IAppState = INITIAL_STATE, action: IAction): IAppState => {
   const { payload } = action;
   switch (action.type) {
     case POST.SET:
       return { ...state, title: payload };
-    case POST.ADD:
-      return { ...state, posts: [...state.posts, payload] }
     default:
       return state;
   }
