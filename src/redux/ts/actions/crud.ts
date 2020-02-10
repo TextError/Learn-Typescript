@@ -1,8 +1,6 @@
 import { POST } from '../../actions/types';
 import { IPost } from '../interface';
 
-
-
 export interface ISetItem {
   type: typeof POST.SET;
   payload: string

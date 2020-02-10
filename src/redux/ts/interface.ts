@@ -4,14 +4,11 @@ export interface IPost {
 };
 
 export interface IState {
-  crud: {
-    title: string;
-    posts: IPost[];
-  }
+  title: string;
+  posts: IPost[];
 }
 
 // Crud //
-
 export interface IListProps {
   title: string,
   posts: IPost[]

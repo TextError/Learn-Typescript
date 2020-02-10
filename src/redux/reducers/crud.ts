@@ -1,5 +1,6 @@
 import { POST } from '../actions/types';
 import { ICrudActionTypes } from '../ts/actions/crud';
+import { IState } from '../ts/interface';
 
 const INITIAL_STATE = {
   title: '',
@@ -7,7 +8,7 @@ const INITIAL_STATE = {
 };
 
 
-const post = (state:any = INITIAL_STATE, action: ICrudActionTypes) => {
+const post = (state: IState = INITIAL_STATE, action: ICrudActionTypes) => {
   const { payload } = action;
   switch (action.type) {
     case POST.SET:
