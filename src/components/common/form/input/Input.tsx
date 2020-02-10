@@ -3,9 +3,9 @@ import classnames from 'classnames';
 import isEmpty from '../../utils/isEmpty';
 
 import './input.css';
-import { IInput } from '../../../Redux_Crud/ts/interface';
+import { IofInput } from '../../../Redux_Crud/ts/interface';
 
-const Input: React.FC<IInput> = ({ name, label, value, onChange, onFocus, type, error }) => {  
+const Input: React.FC<IofInput> = ({ name, label, value, onChange, onFocus, type, error }) => {  
   const err = !isEmpty(error);
   const val = !isEmpty(value);
   return (

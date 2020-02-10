@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/actions/crud';
-import { inputEvt, formSubmit, IInputState } from './ts/interface';
+import { inputEvt, formSubmit, IofInputState } from './ts/interface';
 
 import Input from '../common/form/input/Input';
 import isEmpty from '../common/utils/isEmpty';
 
 const Form: React.FC<any> = ({ addItem }) => {
-  const [state, setState] = useState<IInputState>({ input: '', error: '', id: 1 });
+  const [state, setState] = useState<IofInputState>({ input: '', error: '', id: 1 });
   const {input, error, id} = state;
 
   const onChange = (e: inputEvt) => setState({ ...state, input: e.target.value });

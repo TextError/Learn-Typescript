@@ -1,7 +1,7 @@
 export type formSubmit = React.FormEvent<HTMLFormElement>;
 export type inputEvt = React.ChangeEvent<HTMLInputElement>;
 
-export interface IInput {
+export interface IofInput {
   name: string; 
   label: string;
   value: string | number; 
@@ -11,7 +11,7 @@ export interface IInput {
   error: string;
 }
 
-export interface IInputState {
+export interface IofInputState {
   input: string; 
   error: string;
   id: number;
