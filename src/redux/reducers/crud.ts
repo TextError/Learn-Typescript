@@ -1,5 +1,5 @@
 import { POST } from '../actions/types';
-import { ICrudActionTypes } from '../ts/crud';
+import { ICrudActionTypes } from '../ts/actions/crud';
 
 const INITIAL_STATE = {
   title: '',
