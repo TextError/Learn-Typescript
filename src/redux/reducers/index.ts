@@ -7,7 +7,7 @@ import crud from './crud';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['']
+  whitelist: ['crud']
 };
 
 const rootReducer = combineReducers({

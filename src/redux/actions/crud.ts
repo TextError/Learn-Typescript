@@ -9,3 +9,7 @@ export const setPost = (title: string) => (dispatch: ThunkDispatch<any, any, IAc
 export const addPost = (post: IPost ) => (dispatch: ThunkDispatch<any, any, IAction>) => {
   dispatch({ type: POST.ADD, payload: post })
 };
+
+export const deletePost = (id: number ) => (dispatch: ThunkDispatch<any, any, IAction>) => {
+  dispatch({ type: POST.DELETE, payload: id })
+};

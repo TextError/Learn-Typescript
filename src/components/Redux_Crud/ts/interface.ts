@@ -29,5 +29,11 @@ export interface ISetPost {
 }
 
 export interface IAddPost {
-  setPost: (post: IPost) => void
+  addPost: (post: IPost) => void
+}
+
+export interface IPostComponent {
+  id: number,
+  post: string,
+  deletePost: (id: number) => void
 }
