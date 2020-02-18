@@ -22,7 +22,7 @@ export interface IofInputState {
 
 export interface IListProps {
   title: string,
-  posts: IPost []
+  posts: IPost[]
 }
 
 export interface ISetPost {

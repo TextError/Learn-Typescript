@@ -1,12 +1,3 @@
-import { POST } from "./types";
-
-export const createAction = <T extends POST, P>(type: T) => (payload: P) => {
-  return {
-    type,
-    payload
-  };
-};
-
 interface IStringMap<T> {
   [key: string]: T;
 }

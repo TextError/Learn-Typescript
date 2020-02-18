@@ -1,21 +1,22 @@
-import { POST } from '../actions/types';
-import { IAppState } from '../ts/interface';
-import { IAction } from '../actions/crud';
+import { IAction } from "../actions/crud";
+import { POST } from "../actions/types";
+import { IAppState } from "../ts/interface";
 
-const INITIAL_STATE: IAppState = {
+
+const initState: IAppState = {
   title: '',
   posts: []
 };
 
-
-const post = (state: IAppState = INITIAL_STATE, action: IAction): IAppState => {
-  const { payload } = action;
+const post = (state: IAppState = initState, action: IAction ): IAppState => {
   switch (action.type) {
     case POST.SET:
-      return { ...state, title: payload };
+      return { ...state, title: action.payload };
+    case POST.ADD:
+      return { ...state, posts: [...state.posts, action.payload] };
     default:
       return state;
   }
 };
 
-export default post;
+export default post

@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
-import { IAppState } from '../ts/interface';
+import { ISelectorState } from '../ts/interface';
 
-const select_title_state = (state: IAppState) => state.title;
-const select_posts_state = (state: IAppState) => state.posts;
+const select_title_state = (state: ISelectorState) => state.crud.title;
+const select_posts_state = (state: ISelectorState) => state.crud.posts;
 
 export const state_title = createSelector(
   [select_title_state],

@@ -3,6 +3,13 @@ export interface IAppState {
   posts: IPost[];
 };
 
+export interface ISelectorState {
+  crud: {
+    title: string;
+    posts: IPost[];
+  }
+};
+
 export interface IPost {
   id: number;
   post: string;
