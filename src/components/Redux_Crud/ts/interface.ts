@@ -1,4 +1,3 @@
-import { POST } from "../../../redux/actions/types";
 import { IPost } from "../../../redux/ts/interface";
 
 export type formSubmit = React.FormEvent<HTMLFormElement>;
@@ -26,5 +25,9 @@ export interface IListProps {
 }
 
 export interface ISetPost {
-  setPost: (title: string) => { type: POST .SET; payload: string; };
+  setPost: (title: string) => void
+}
+
+export interface IAddPost {
+  setPost: (post: IPost) => void
 }

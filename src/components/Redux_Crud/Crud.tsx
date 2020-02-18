@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { ThunkDispatch } from 'redux-thunk';
-import { setPost, IAction } from '../../redux/actions/crud';
+import { setPost } from '../../redux/actions/crud';
 import { ISetPost } from './ts/interface';
 
 import List from './List';
@@ -23,8 +22,4 @@ const Crud: React.FC<ISetPost> = ({ setPost }) => {
   )
 };
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<any, any, IAction>) => ({
-  setPost: (title: string) => dispatch(setPost(title))
-});
-
-export default connect(null, mapDispatchToProps)(Crud);
+export default connect(null, { setPost })(Crud);

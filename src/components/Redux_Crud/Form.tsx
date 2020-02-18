@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-// import { addItem } from '../../redux/actions/crud';
+import { addPost } from '../../redux/actions/crud';
 import { inputEvt, formSubmit, IofInputState } from './ts/interface';
-
-import Input from '../common/form/input/Input';
+import { IAddPost } from '../../redux/actions/types';
 import isEmpty from '../common/utils/isEmpty';
 
-const Form: React.FC<any> = ({ addItem }) => {
+import Input from '../common/form/input/Input';
+
+const Form: React.FC<any> = ({ addPost }) => {
   const [state, setState] = useState<IofInputState>({ input: '', error: '', id: 1 });
   const {input, error, id} = state;
 
@@ -16,7 +17,7 @@ const Form: React.FC<any> = ({ addItem }) => {
   const onSubmit = (e: formSubmit) => {
     e.preventDefault();
     if(isEmpty(input)) return setState({ ...state, error: 'Input field is required!' });
-    addItem({ post: input, id });
+    addPost({ post: input, id });
     setState({ ...state, input: '', id: id + 1 });
   };
 
@@ -36,4 +37,4 @@ const Form: React.FC<any> = ({ addItem }) => {
   )
 };
 
-export default connect(null, { })(Form);
+export default connect(null, { addPost })(Form);

@@ -1,5 +1,4 @@
-import { IAction } from "../actions/crud";
-import { POST } from "../actions/types";
+import { POST, IAction } from "../actions/types";
 import { IAppState } from "../ts/interface";
 
 
